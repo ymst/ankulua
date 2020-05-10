@@ -191,6 +191,41 @@
 		</div>
 	    </div> <!-- end s-content__media -->
 
+	    <div class="s-content__media col-full">
+	        <h2 class="yy_title">スリスリスクリプトの説明</h2>
+		<p>少しご質問が多くなってきたので追記しておきます。スリスリスクリプトを実行しているときの設定画面について説明します。
+		<p>スクリプトを起動すると、まずプレイするエリアとステージを選択することになります。これは、自動周回するときに設定します。とりあえず1ステージだけプレイするのであれば何もいじらなくても構いません。</p>
+                <div class="s-content__post-thumb">
+                    <img src="images/script0001.jpg" alt="" >
+                </div>
+		<p>すると次の設定項目が現れます。<p>
+                <div class="s-content__post-thumb">
+                    <img src="images/script0002.jpg" alt="" >
+                </div>
+		<p>設定項目の内容は以下の通りです。
+		    <li><u>Debug</u> 通常はオフのままで使います。スクリプトがうまく動作しないときの調査に使います。何か動作を行うたびに「○○を実行しました」というメッセージなどを表示します。</li>
+		    <li><u>only 1 battle</u> 1戦闘だけ行う場合にオンにします。オンにした場合は、戦闘終了後スクリプトは自動的に終了します。オフにした場合は、選んだエリアのステージを自動周回します。</li>
+		    <li><u>Average Pummle</u> オンにすると敵が2体、3体出てきた場合にできるだけ均等にダメージを与えるように攻撃します。</li>
+		    <li><u>bigger puni</u> スリスリと円を描くときの半径を設定します。smallだと隣り合ったぷにをくっつける程度、enormousだとパズルエリアの1/3くらいをスリスリします。</li>
+		    <li><u>Break obstacles</u> おじゃまぷになど何回かタップしないと壊れない障害物やポイント玉があるときはオンにします。1回のスリスリ動作に対して付近のぷにを10回程度タップして、なるべく障害物を壊すように動作します。</li>
+		    <li><u>Fill screen with 1/2 kind(s)</u> 1色 or 2色整地を行うときにオンにします。フィーバーに入ったらスキルぶっぱしたいだけならオフで構いません。</li>
+		    <li><u>Enable Image Detection</u> ぷに画像を認識してぷにを最適に繋いで消す動作を行う機能ですが、<span class="yy_title3">現状まったく動作しません。</span>常にオフで。</li>
+		</p>
+		<p>整地のスイッチをオンにするとさらに次の設定項目が現れます。
+                <div class="s-content__post-thumb">
+                    <img src="images/script0003.jpg" alt="" >
+                </div>
+		<p>整地するときのメンバー、アタッカー妖怪の場所(左から何番めか)などを設定する必要があります。
+		    <li><u>fill screen 1st</u> 左から1番めの妖怪</li>
+		    <li><u>fill screen 2nd</u> 左から2番めの妖怪</li>
+		    <li><u>fill screen 3rd</u> 左から3番めの妖怪</li>
+		    <li><u>fill screen 4th</u> 左から4番めの妖怪</li>
+		    <li><u>The position of attacker yo-kai</u> アタッカー妖怪が左から何番めか</li>
+		    <li><u>The position of Yamatan</u> ヤマタン、またはそれに類する役目の妖怪が左から何番めか</li>
+		    <li><u>Stop before fever</u> オンにすると整地が終わった時点でスクリプトを停止し、ゲームを一時中断状態にします。整地後、自分で好きにプレイしたいときに使います。</li>
+		</p>
+	    </div> <!-- end s-content__media -->
+
             <div class="col-full s-content__main">
 	        <h2 class="yy_title">利用方法</h2>
 		<p>まず最初にユーザ登録のために<span class="yy_marker">機種ID</span>を送って頂きます。<span class="yy_marker"設定 > 一般 > 情報 > シリアル番号</span>からシリアル番号がコピペできますので、メールなどにペーストして「お試し希望」などと送って下さい。こちらでユーザ登録をしたautotouchのスクリプトをお送りします。</p>
