@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <!--- basic page needs    ================================================== -->
+    <meta charset="utf-8">
+    <title>AutoGamer</title>
+    <meta content="android,ankulua,macro,bot,autoplay,automate,automation,script,cheat,アンドロイド,マクロ,ボット,自動化,ツール,チート,
+リラックマ,リラックマ牧場,牧場,攻略,裏技,小技,
+", name="keyword">
+    <meta content="ankuluaを使った、リラックマ牧場のluaスクリプトを作成、販売しています。スマホを触れない間の時間をリラックマ牧場で有効に使って、充実したリラックマ牧場経営を進めていけるようにすることを最終的な目的としています。" name="description">
+    <meta name="author" content="">
+    <!-- mobile specific metas    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&amp;subset=cyrillic,japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <!-- CSS    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- script    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+    <!-- favicons    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<style>
+  /* CSS for LQIP blur added by Yama190220
+   use calss "lazyload blur" instead of "lazyload" */
+.blur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    transition: filter 600ms, -webkit-filter 600ms;
+}
+.blur.lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+.yy_title {
+    padding: 0.4em 0.5em; /* 文字の上下 左右の余白 */
+    color: #494949; /* 文字色 */
+    /* background: #f4f4f4; */ /* 背景色 */
+    border-left: solid 5px #7db4e6; /* 左線 */
+    border-bottom: solid 3px #d7d7d7; /* 下線 */
+}
+.yy_marker {
+    background:rgba(0, 0, 0, 0) linear-gradient(transparent 60%, #FFDFEF 0%) repeat scroll 0 0;
+}
+.yy_marker2 {
+    background:rgba(0, 0, 0, 0) linear-gradient(transparent 60%, #cce5ff 0%) repeat scroll 0 0;
+}
+.yy_marker3 {
+    background:rgba(0, 0, 0, 0) linear-gradient(transparent 60%, #ffffbc 0%) repeat scroll 0 0;
+}
+.yy_date {
+    text-align: left;
+    color: #ff6347;
+}
+.yy_author {
+    text-align: right;
+    color: #5f9ea0;
+}
+.yy_pubdate {
+    text-align: right;
+    color: #006400;
+}
+</style>
+<body id="top">
+    <!-- pageheader    ================================================== -->
+    <section class="s-pageheader s-pageheader--home">
+        <header class="header">
+            <div class="header__content row">
+	      <h1 style="color: white;">AutoGamer</h1>
+                <a class="header__toggle-menu" href="#0" title="Menu"><span>メニュー</span></a>
+                <nav class="header__nav-wrap">
+                    <h2 class="header__nav-heading h6">ナビゲーション</h2>
+                    <ul class="header__nav">
+                        <li><a href="index.html" title="">トップページ</a></li>
+                        <li><a href="dqwalk.html" title="">ドラクエウォーク</a></li>
+                        <li><a href="punipuni.html" title="">妖怪ウォッチぷにぷに</a></li>
+                        <li class="current"><a href="rirakkuma.html" title="">リラックマ牧場</a></li>
+                    </ul> <!-- end header__nav -->
+                    <a href="#0" title="Close Menu" class="header__overlay-close close-mobile-menu">Close</a>
+                </nav> <!-- end header__nav-wrap -->
+            </div> <!-- header-content -->
+        </header> <!-- header -->
+    </section> <!-- end s-pageheader -->
+    <!-- s-content    ================================================== -->
+    <section class="s-content s-content--narrow s-content--no-padding-bottom">
+
+        <article class="row format-video">
+
+            <div class="s-content__header col-full">
+                <h1 class="s-content__header-title">リラックマ牧場のスクリプト</h1>
+            </div> <!-- end s-content__header -->
+
+            <div class="col-full s-content__main">
+	        <h2 class="yy_title">いちご自動栽培収穫スクリプト</h2>
+		<p>空いている畑にいちごを植えて実になったら収穫し「もちもの」画面から売却するという、一連の動作を繰り返すスクリプトです。</p>
+		<ul>
+		    <li>本スクリプトはAnkulua上で動作するスクリプトです。</li>
+		    <li>Android専用です、AnkuluaがそもそもAndroid用のためです。</li>
+		    <li>開発環境で試したところ、畑の数は45個のとき時給は約1000コインです。</li>
+		</ul>
+
+	        <h2 class="yy_title">使い方</h2>
+		<p>いくつか実行前に注意しておくことがありますが、基本的には実行したら放置しておくだけです。</p>
+		<ul>
+		    <li>画面は最小まで小さくしておくこと、画像認識が正常に動作しません。</li>
+		    <li>見えている範囲の畑しか認識できません。また、デコなどが畑のすぐそばにあると畑を画像認識できないので、畑のそばには畑以外何もないようにして下さい。</li>
+		    <li>リラックマやその他の登場人物などが畑の上を歩いているときは畑を認識できずにいちごを植えないことがあります。</li>
+		    <li>「もちもの」画面は一番上まで戻しておいて下さい。「もちもの」画面を開いて一番左上にいちごが表示されることを前提にスクリプトは動作します。</li>
+		</ul>
+
+	        <h2 class="yy_title">お試し版</h2>
+		<p>開発に使った機種と異なる画面解像度の機種でも、解像度の比率を調整して画像認識がうまくいくような機能がAnkuluaにあるそうです。しかしながら、開発した機種以外での動作確認は一切できておらず、動作するかどうか分かりません。</p>
+		<p>そこで、興味を持っていただいた方は、無料でスクリプトの『お試し版』セットをお渡しいたしますので、試してみて下さい。動作しない場合は、ご都合よろしければ、動作するよう調整する作業にお付き合い頂ければ、と思いますので、ご協力して頂けますと幸いです。</p>
+		<p>なお、お試し版は一連の動作を遅くしてあります。あくまで動作確認用のためです、ご了承下さい。</p>
+		<p>『お試し版』をご希望の方は、メールの件名に「お試し版希望」とだけ書いて頂ければ、できるだけ速やかにお返事致します。</p>
+	        <h2 class="yy_title">動作している様子</h2>
+		<p>スクリプトを使用して、自動いちご植え→刈り→販売をしている様子です。</p>
+                <div class="video-container">
+		    <video preload="metadata" width="352" height="640" controls>
+		        <source src="./media/rirakkuma0.mp4" type="video/mp4">
+		    </video>
+		</div>
+                <h2 class="yy_title">お問い合わせ先はこちら</h2>
+		<p>メールアドレスは以下です。</p>
+		<p>ドットを"."に、アットを"@"に置き換えて下さい。48時間以内に返答致します。</p>
+            </div>
+
+        </article>
+
+    </section>
+    <footer class="s-footer">
+        <div class="s-footer__main">
+            <div class="row">
+            </div>
+        </div> <!-- end s-footer__main -->
+        <div class="s-footer__bottom">
+            <div class="row">
+                <div class="col-full">
+                    <div class="s-footer__copyright">
+                        <span>© Copyright Philosophy 2018</span>
+                        <span>Site Template by <a href="https://colorlib.com/">Colorlib</a></span>
+                    </div>
+                    <div class="go-top">
+                        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end s-footer__bottom -->
+    </footer> <!-- end s-footer -->
+    <!-- preloader    ================================================== -->
+    <div id="preloader">
+        <div id="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Java Script    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
